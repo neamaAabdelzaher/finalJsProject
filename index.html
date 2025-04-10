@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Animate -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+</head>
+
+<body>
+
+
+
+
+    <!-- black navbar -->
+    <nav class="navbar d-xl-none d-block bg-white  ">
+        <div class="container-fluid ">
+            <div class="black-logo  p-3  ">
+                <img src="images/logo-black.avif" alt="" width="135" height="39">
+            </div>
+            <ul
+                class="icons list-unstyled  d-flex justify-content-center align-items-center gap-4 pt-3 ">
+                <button class="bolder border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <li><i class="fa-solid fa-bars"></i></li>
+                </button>
+                <li><i class="fa-solid fa-magnifying-glass "></i></li>
+                <li> <i class="fa-regular fa-user"></i> </li>
+                <li><i class="fa-regular fa-heart"></i> (0)</li>
+                <li><i class="fa-solid fa-bag-shopping"></i> (0)</li>
+            </ul>
+            <div class="offcanvas offcanvas-start" tabindex="1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <!-- close button -->
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- side menu -->
+                <div class=" side-menu offcanvas-body">
+                    <ul class=" navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <!-- home -->
+                        <li class="nav-item">
+                            <a class="nav-link mb-2 text-secondary  fw-bold" aria-current="page" href="#">Home</a>
+                        </li>
+
+                        
+                        
+                        <!-- product -->
+                        <li class="nav-item">
+                            <a class="nav-link  mb-2 fw-bold text-secondary" href="#">product</a>
+                        </li>
+                       
+                        <!-- collection -->
+                            <li class="dropdown">
+                                <button class="bg-white border-0  mb-2 text-secondary fw-bold"  type="button" id="collectionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    COLLECTION
+                                    <span class="ms-2 reset-icon" id="collectionIcon">▼</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="collectionDropdown">
+                                    <li class="nested-dropdown">
+                                        <a class="dropdown-item d-flex justify-content-between align-items-center" id="featureProduct">
+                                            Feature product
+                                            <span class="reset-icon" id="featureIcon">▼</span>
+                                        </a>
+                                        <ul class="dropdown-menu nested-dropdown-menu" id="featureMenu">
+                                            <li><a class="dropdown-item" href="#">Chickpea 150g</a></li>
+                                            <li><a class="dropdown-item" href="#">Fresh almonds</a></li>
+                                            <li><a class="dropdown-item" href="#">Healthy walnut</a></li>
+                                            <li><a class="dropdown-item" href="#">Juglans walnuts</a></li>
+                                            <li><a class="dropdown-item" href="#">Pure mug dal</a></li>
+                                            <li><a class="dropdown-item" href="#">Saffron spice still</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nested-dropdown">
+                                        <a class="dropdown-item d-flex justify-content-between align-items-center" id="trendingProduct">
+                                            Trending product
+                                            <span class="reset-icon" id="trendingIcon">▼</span>
+                                        </a>
+                                        <ul class="dropdown-menu nested-dropdown-menu" id="trendingMenu">
+                                            <li><a class="dropdown-item" href="#">Stack of cinnamon</a></li>
+                                            <li><a class="dropdown-item" href="#">Red chili pepper</a></li>
+                                            <li><a class="dropdown-item" href="#">Fresh almonds</a></li>
+                                            <li><a class="dropdown-item" href="#">Healthy walnut</a></li>
+                                            <li><a class="dropdown-item" href="#">Natural coriander</a></li>
+                                            <li><a class="dropdown-item" href="#">Green moong dal</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="#">Digital meter</a></li>
+                                <li><a class="dropdown-item" href="#">urbn ev bike</a></li>
+                                </ul>
+                            </li>  
+                        <!-- blog -->
+                        <li class="nav-item">
+                            <a class="nav-link mb-2 text-secondary fw-bold" href="#">blog</a>
+                        </li>
+                        <!-- pages -->
+                        <li class="nav-item dropdown-side">
+                            <a class="nav-link mb-2 fw-bold  text-secondary" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                pages  <span class="reset-icon" id="featureIcon">▼</span>
+                            </a>
+                            <ul class="dropdown-menu ">
+
+                                <li><a class="text-capitalize " href="#">About us</a></li>
+                                <li><a class="text-capitalize" href="#">Contact us</a></li>
+                                <li><a class="text-capitalize" href="#">faqs</a></li>
+                                <li><a class="text-capitalize" href="#">return policy</a></li>
+                                <li><a class="text-capitalize" href="#">privacy policy</a></li>
+                                <li><a class="text-capitalize" href="#">payment policy</a></li>
+                                <li><a class="text-capitalize" href="#">terms & conditions</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+   <!-- white navbar -->
+    <div class="evobn container-fluid ">
+
+        <nav class="row pt-4  ">
+            <div class="col-xl-5  d-none d-xl-block pt-2 ">
+                <ul class="menu list-unstyled d-flex justify-content-center gap-3">
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">product</a></li>
+                    <li class="collection" id="collection">
+                        <a href="#" id="collectionLink">collection <i class="fa-solid fa-chevron-down "></i></a>
+                        <ul class=" dropdown-menu-collection" id="dropdown-menu-collection">
+                            <div class="feature-product">
+                                <ul>
+                                    <li>
+                                        <h2>Feature product</h2>
+                                    </li>
+                                    <li><a href="" class="dropdown-item">Chickpea 150g</a></li>
+                                    <li><a href="">Fresh almonds</a></li>
+                                    <li><a href="">Healthy walnut</a></li>
+                                    <li><a href="">Juglans walnuts</a></li>
+                                    <li><a href="">Pure mug dal</a></li>
+                                    <li><a href="">Saffron spice still</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="trending-product">
+                                <ul>
+                                    <li>
+                                        <h2>Trending product</h2>
+                                    </li>
+                                    <li><a href="">Stack of cinnamon</a></li>
+                                    <li><a href="">Red chili pepper</a></li>
+                                    <li><a href="">Fresh almonds</a></li>
+                                    <li><a href="">Healthy walnut</a></li>
+                                    <li><a href="">Natural coriander</a></li>
+                                    <li><a href="">Green moong dal</a></li>
+
+                                </ul>
+                            </div>
+
+                            <div>
+                                <img src="images/menu-banner-01_1_aea10ef2-20c9-41de-bd0f-417bef3424d1.webp" alt="">
+
+                                <img src="images/menu-banner-01_1_014bd367-3749-49f3-8ea4-f32f7c47ea7d.webp" alt="">
+                            </div>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="#">blog</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-expanded="false" aria-controls="dropdown-menu">pages <i
+                                class="fa-solid fa-chevron-down "></i></a>
+                        <ul class="dropdown-menu" id="dropdown-menu">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">faqs</a></li>
+                            <li><a href="#">return policy</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">payment policy</a></li>
+                            <li><a href="#">terms & conditions</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-xl-2 d-none d-xl-block logo d-flex justify-content-center align-items-center ">
+                <img src="images/logo-white.png" alt="" width="135" height="39">
+
+            </div>
+
+
+            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-6 d-none d-xl-block header-right pt-2">
+                <ul class=" list-unstyled d-flex justify-content-center gap-3 ">
+                    <li><i class="fa-solid fa-magnifying-glass "></i> search</li>
+                    <li><i class="fa-regular fa-user"></i> my account</li>
+                    <li><i class="fa-regular fa-heart"></i> my wishlist(0)</li>
+                    <li> <i class="fa-solid fa-bag-shopping"></i> cart(0)</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- heading -->
+        <section class="heading  mt-5 ">
+            <div class="swiper-container mySwiper-header">
+                <div class="swiper-wrapper ">
+                    <div class=" row swiper-slide d-flex justify-content-around mx-2 align-items-center">
+                        <div class="bike-info col-xl-6 col-lg-6 col-md-12 col-sm-12 px-5 bike  ">
+                            <h2 class="title mb-5 animate__animated animate__slideInUp">Life is a short
+                                <br>to ride ev bike
+                            </h2>
+
+                            <div
+                                class="bike-parts d-flex gap-5 mb-5 animate__animated animate__slideInUp animate__delay-1s">
+                                <div class="d-flex gap-3">
+                                    <img src="images/ev-bike-slide-sub-img-01.webp"  width="70" height="70" alt="">
+                                    <div class="d-flex flex-column fw-bold text-uppercase mt-2">
+                                        <span class="">Best quality</span>
+                                        <span class="">Jumper & tire</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <img src="images/ev-bike-slide-sub-img-02.webp" width="70" height="70" alt="">
+                                    <div class="d-flex flex-column fw-bold text-uppercase mt-2">
+                                        <span>A leather</span>
+                                        <span>Sheet 5T</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h4
+                                class="price mb-5 fw-bold text-uppercase  animate__animated animate__slideInUp animate__delay-2s">
+                                <span>Satrting price :</span>
+                                <span style="color: #f2ff24;">$999.00</span>
+                            </h4>
+
+                            <a href="" class="btn  animate__animated animate__slideInUp animate__delay-3s ">Go to
+                                store</a>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-12  bike-image   ">
+                            <img src="images/ev-bike-slide-01.webp" class="responsive-image img-fluid"   alt="">
+                        </div>
+                    </div>
+
+                    <div class="row swiper-slide d-flex justify-content-evenly align-items-center">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 px-5 bike">
+                            <h2 class="title mb-5 ">Life is a short
+                                <br>to ride ev bike
+                            </h2>
+
+                            <div class="bike-parts d-flex gap-5 mb-5">
+                                <div class="d-flex gap-3">
+                                    <img src="images/ev-bike-slide-sub-img-03.webp" width="70" height="70" alt="">
+                                    <div class="d-flex flex-column fw-bold text-uppercase mt-2">
+                                        <span class="">Best quality</span>
+                                        <span class="">Jumper & tire</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <img src="images/ev-bike-slide-sub-img-04.webp" width="70" height="70" alt="">
+                                    <div class="d-flex flex-column fw-bold text-uppercase mt-2">
+                                        <span>A leather</span>
+                                        <span>Sheet 5T</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h4 class="price mb-5 fw-bold text-uppercase">
+                                <span>Satrting price :</span>
+                                <span style="color: #f2ff24;">$999.00</span>
+                            </h4>
+
+                            <a href="" class="btn ">Go to store</a>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-12  bike-image">
+                            <img src="images/ev-bike-slide-02.webp" class="responsive-image img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class=" row swiper-slide d-flex justify-content-evenly align-items-center">
+                        <div class=" col-xl-6 col-lg-6 col-md-12 col-sm-12  px-5 bike  ">
+                            <h2 class="title mb-5">Life is a short
+                                <br>to ride ev bike
+                            </h2>
+
+                            <div class="bike-parts d-flex gap-5 mb-5">
+                                <div class="d-flex gap-3">
+                                    <img src="images/ev-bike-slide-sub-img-05.webp" width="70" height="70" alt="">
+                                    <div class="d-flex flex-column fw-bold text-uppercase mt-2">
+                                        <span class="">Best quality</span>
+                                        <span class="">Jumper & tire</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <img src="images/ev-bike-slide-sub-img-06.webp" width="70" height="70" alt="">
+                                    <div class="d-flex flex-column fw-bold text-uppercase mt-2">
+                                        <span>A leather</span>
+                                        <span>Sheet 5T</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h4 class="price mb-5 fw-bold text-uppercase">
+                                <span>Satrting price :</span>
+                                <span style="color: #f2ff24;">$999.00</span>
+                            </h4>
+
+                            <a href="" class="btn ">Go to store</a>
+                        </div>
+
+                        <!-- <div class=" col-xl-6 col-lg-6 col-md-12  bike-image ">
+                            <img src="images/ev-bike-slide-03.webp" class="responsive-image img-fluid" alt="">
+                        </div> -->
+                    </div>
+
+                </div>
+                <div class="swiper-pagination">
+
+                </div>
+            </div>
+
+
+        </section>
+
+    </div>
+
+    <!-- shop category -->
+
+ 
+    <section class="shop-category container-fluid half-page-slider">
+        <div class="row d-flex align-items-center justify-content-center">
+            <!-- Left Content (Half of page) -->
+           
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center ">
+                    <h4 class="fw-bold text-uppercase fs-2">Shop category <br> only 60% off</h4>
+                    <a href="" class="btn view-more-btn ">view more </a>
+                </div>
+            
+    
+            <!-- Right Slider (Half of page) -->
+            <div class="col-xl-8 col-lg-8 col-sm-12 col-md-8">
+                <div class="d-flex flex-column ">
+                    <div class="swiper mySwiper-cat">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide d-flex justify-content-between align-items-center">
+                                <div class="slide-content d-flex flex-column">
+                                    <span class="d-inline-block">10+ ITEMS</span>
+                                    <h4 >PRO EV BIKE</h4>
+                                    
+                                </div>
+                                <div class="slide-image">
+                                    <img src="images/ev-bike-cat-01.webp" alt="EV Bike">
+                                </div>
+                                <div class="arrow-div">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="swiper-slide d-flex justify-content-between align-items-center">
+                                <div class="slide-content d-flex flex-column">
+                                    <span class="d-inline-block">7+ ITEMS</span>
+                                    <h4>MIS EV BIKE</h4>
+                                </div>
+                                    <div class="slide-image">
+                                        <img src="images/ev-bike-cat-02.webp" alt="EV Bike">
+                                    </div>
+                                    <div class="arrow-div">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                
+                            </div>
+                            <div class="swiper-slide d-flex justify-content-between align-items-center">
+                                <div class="slide-content d-flex flex-column">
+                                    <span class="d-inline-block">7+ ITEMS</span>
+                                    <h4>MIS EV BIKE</h4>
+                                    
+                                </div>
+
+                                <div class="slide-image">
+                                    <img src="images/ev-bike-cat-03.avif" alt="EV Bike">
+                                </div>
+                                <div class="arrow-div">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="swiper-slide d-flex justify-content-between align-items-center">
+                                <div class="slide-content d-flex flex-column">
+                                    <span class="d-inline-block">7+ ITEMS</span>
+                                    <h4>MIS EV BIKE</h4>
+                                    
+                                </div>
+                                <div class="slide-image">
+                                    <img src="images/ev-bike-cat-04.avif" alt="EV Bike">
+                                </div>
+                                <div class="arrow-div">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                    <div class="swiper mySwiper-cat">
+                        <div class="swiper-wrapper ">
+                            <div class=" swiper-slide d-flex justify-content-between align-items-center">
+                                <div class="slide-content d-flex flex-column">
+                                    <span class="d-inline-block">10+ ITEMS</span>
+                                    <h4>PRO EV BIKE</h4>
+                                    
+                                </div>
+                                <div class="slide-image">
+                                    <img src="images/ev-bike-cat-05.avif" alt="EV Bike">
+                                </div>
+
+                                <div class="arrow-div">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="swiper-slide d-flex justify-content-between align-items-center">
+                                <div class="slide-content d-flex flex-column">
+                                    <span class="d-inline-block">7+ ITEMS</span>
+                                    <h4>MIS EV BIKE</h4>
+                                    
+                                </div>
+                                <div class="slide-image">
+                                    <img src="images/ev-bike-cat-06.webp" alt="EV Bike">
+                                </div>
+                                <div class="arrow-div">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="swiper-slide d-flex justify-content-between align-items-center">
+                                <div class="slide-content d-flex flex-column">
+                                    <span class="d-inline-block">7+ ITEMS</span>
+                                    <h4>MIS EV BIKE</h4>
+                                    
+                                </div>
+                                <div class="slide-image">
+                                    <img src="images/ev-bike-cat-07.avif" alt="EV Bike">
+                                </div>
+                                <div class="arrow-div">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="swiper-slide d-flex justify-content-between align-items-center">
+                                <div class="slide-content d-flex flex-column">
+                                    <span class="d-inline-block"> 7+ ITEMS</span>
+                                    <h4>MIS EV BIKE</h4>
+                                    
+                                </div>
+                                <div class="slide-image">
+                                    <img src="images/ev-bike-cat-08.avif" alt="EV Bike">
+                                </div>
+                                <div class="arrow-div">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <!-- Add more slides as needed -->
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-white pt-4 mt-4" style="transform: translateY(50%); ">
+            <h2 style="font-weight: bolder; font-size: 100px; text-transform: uppercase;">Best collection</h2>
+        </div>
+    </section>
+
+
+    <!-- Advance features -->
+
+    <section class="container-fluid advance-features mt-5">
+        <h4 class="fw-bold text-uppercase fs-2 text-center">Advance features</h4>
+
+        <div class="row d-flex  justify-content-center  gap-3 mt-5  ">
+            
+            <div class="col-4 col1 d-flex flex-column align-items-center justify-content-center ">
+                     <div class="d-flex gap-3 justify-content-center align-items-center">
+                        <div class="">
+                            <i style="color: #4AA865;" class="fs-2 fa-solid fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-uppercase fw-bold">Higher truerange</h5>
+                            <p class="text-secondary fw-bold">For the places you planned.</p>
+                        </div>
+                     </div>
+                
+                <div class="d-flex justify-content-center gap-4  ">
+                    <div class="bg-white p-3 ">
+                        <h5 style="color: #3b7e5b; " class="fw-bold text-uppercase">110 km</h5>
+                        <p class="fw-bold text-uppercase">3.7 kwh</p>
+                    </div>
+                    <div class="bg-white p-3 ">
+                        <h5 style="color: #3b7e5b; " class="fw-bold text-uppercase">90 km</h5>
+                        <p class="fw-bold text-uppercase">2.9 kwh</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-4 col2 position-relative">
+                <div class="">
+                    <img src="images/ev-bike-features-img-01.jpg" width="330px" height="210px" alt="" srcset="">
+
+                </div>
+                
+                
+                <div
+                    class="desc position-absolute top-50 start-50 translate-middle text-white text-uppercase text-center">
+                    <div class="d-flex  gap-3 ">
+                        <i style="color: #4AA865;" class="fs-2 fa-solid fa-shield"></i>
+                        <h5 class="fw-bold text-nowrap pb-4 fs-5">Safer evobn</h5>
+                    </div>
+                    <h4 class="text-nowrap fs-5 fw-bold">Emergency stop</h4>
+                    <h4 class="text-nowrap fs-5 fw-bold">signal full safe</h4>
+                    <a href="" class="about-btn text-uppercase fw-bold">About story</a>
+
+                </div>
+
+            </div>
+            <div class="col-4 col3 ">
+                <div>
+                    <img src="images/ev-bike-features-img-02.jpg" width="330px" height="210px" alt="">
+            
+                </div>
+
+                
+                    <div class=" position-absolute top-0 start-0  pt-4 px-4">
+                        <i style="color: #4AA865;" class="fs-2 fa-solid fa-code-pull-request"></i>
+                    </div>
+                    <div class=" desc">
+            
+                        <h5 class="fw-bold text-uppercase text-black text-nowrap">New switchgear</h5>
+                        <p class="text-secondary fw-bold text-nowrap">FMore control on the go.</p>
+                    </div>
+                
+                
+            
+            
+            </div>
+        </div>
+
+        <div class="row mt-5 d-flex justify-content-evenly ">
+            <div class="digital-meter col-4 position-relative">
+                <img src="images/ev-bike-features-img-03.jpg" width="500px" height="200px">
+            
+                <div class="d-flex justify-content-start align-items-center gap-3 position-absolute top-0 start-20 pt-4  ">
+                    <div  class="">
+                        <i style="color: #4AA865;" class="fs-2 fa-solid fa-sun"></i>
+                    </div>
+                    <div class="desc2 ">
+                        <h5 class="fw-bold text-uppercase text-black text-nowrap">DIGITAL METER</h5>
+                        <p class="text-secondary fw-bold text-nowrap">Go of the accelerator.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 position-relative ">
+                <img src="images/ev-bike-features-img-04.jpg" width="500px" height="200px">
+
+                <div class="d-flex justify-content-start align-items-center gap-3 position-absolute top-0 start-20 pt-4 ">
+                    <div  class="">
+                        <i style="color: #4AA865;" class="fs-2 fa-solid fa-bullseye"></i>
+                    </div>
+                    <div class="desc2 ">
+                        <h5 class="fw-bold text-uppercase text-black text-nowrap">DIGITAL METER</h5>
+                        <p class="text-secondary fw-bold text-nowrap">Go of the accelerator.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div class=" mt-5" style="border-top: 1px solid rgba(128, 128, 128, 0.1);">
+
+    </div>
+    <!-- brands -->
+
+    <!-- Swiper -->
+    <div class="container swiper-container-brand">
+        <div class="swiper-wrapper d-flex justify-content-evenly mt-5 gap-4">
+            <div class="swiper-slide">
+                <img src="images/ev-bike-brand-logo-01.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/ev-bike-brand-logo-02.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/ev-bike-brand-logo-03.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/ev-bike-brand-logo-04.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/ev-bike-brand-logo-05.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/ev-bike-brand-logo-06.png" alt="">
+            </div>
+
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+    </div>
+
+    <!-- Trending product -->
+   <section class="trending-prods container-fluid mt-5 ">
+        <h4 class="fw-bold text-uppercase fs-2 text-center" style="padding:100px 0 50px 0;">Trending products</h4>
+        <div class="product-grid ">
+            <div class="product-card">
+                <img src="images/ev-bike-pro-01.jpg" alt="Digital front display">
+               <div class="toggle">
+                <div class="buttons d-flex flex-column gap-3 align-items-center" >
+                    <div class="eye-heart d-flex justify-content-center">
+                            
+                    <div class="eye ">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class=" heart"> 
+                         <i class="fa-regular fa-heart"></i> 
+                    </div>
+                         </div>
+                    <div class="cart-btn">
+                        <button class="btn text-white fw-bold text-uppercase">add to cart</button>
+                    </div>
+                </div>
+               </div>
+               <div class="text">
+                <p class="product-category">E-Bike / Scooter</p>
+                <p class="product-title">Digital front display</p>
+                <div class="product-price">
+                    <span class="span1">$44.00</span> ~ <span class="span2">$49.00</span>
+                    <span class="discount-badge">5%</span>
+                </div>
+               </div>
+            </div>
+            <div class="product-card">
+                <img src="images/ev-bike-pro-02.jpg" alt="Seat storage battery">
+                <div class="toggle">
+                    <div class="buttons d-flex flex-column gap-3 align-items-center" >
+                        <div class="eye-heart d-flex justify-content-center">
+                                
+                        <div class="eye ">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class=" heart"> 
+                             <i class="fa-regular fa-heart"></i> 
+                        </div>
+                             </div>
+                        <div class="cart-btn">
+                            <button class="btn text-white fw-bold text-uppercase">add to cart</button>
+                        </div>
+                    </div>
+                   </div>
+                <div class="text">
+                    <p class="product-category">E-Bike / Scooter</p>
+                <p class="product-title">Seat storage battery</p>
+                <div class="product-price">
+                    <span class="span1">$49.00</span> ~<span class="span2">$54.00</span>
+                    <span class="discount-badge">5%</span>
+                </div>
+                </div>
+                
+            </div>
+            <div class="product-card">
+                <img src="images/ev-bike-pro-04.jpg" alt="Glass mirror RV">
+                <div class="toggle">
+                    <div class="buttons d-flex flex-column gap-3 align-items-center" >
+                        <div class="eye-heart d-flex justify-content-center">
+                                
+                        <div class="eye ">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class=" heart"> 
+                             <i class="fa-regular fa-heart"></i> 
+                        </div>
+                             </div>
+                        <div class="cart-btn">
+                            <button class="btn text-white fw-bold text-uppercase">add to cart</button>
+                        </div>
+                    </div>
+                   </div>
+               <div class="text">
+                <p class="product-category">E-Bike / Scooter</p>
+                <p class="product-title">Glass mirror RV</p>
+                <div class="product-price">
+                    <span class="span1">$49.00</span>  ~<span class="span2">$54.00</span>
+                    <span class="discount-badge">5%</span>    
+                </div>
+               </div>
+            </div>
+            <div class="product-card">
+                <img src="images/ev-bike-pro-05.jpg" alt="Motor controller">
+                <div class="toggle">
+                    <div class="buttons d-flex flex-column gap-3 align-items-center" >
+                        <div class="eye-heart d-flex justify-content-center">
+                                
+                        <div class="eye ">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class=" heart"> 
+                             <i class="fa-regular fa-heart"></i> 
+                        </div>
+                             </div>
+                        <div class="cart-btn">
+                            <button class="btn text-white fw-bold text-uppercase">add to cart</button>
+                        </div>
+                    </div>
+                   </div>
+                <div class="text">
+                    <p class="product-category">E-Bike / Scooter</p>
+                <p class="product-title">Motor controller</p>
+                <div class="product-price">
+                    <span class="span1">$48.00</span> ~ <span class=" span2">$76.00</span>
+                    <span class="discount-badge">15%</span>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/ev-bike-pro-06.jpg" alt="En rubber tyres">
+                <div class="toggle">
+                    <div class="buttons d-flex flex-column gap-3 align-items-center" >
+                        <div class="eye-heart d-flex justify-content-center">
+                                
+                        <div class="eye ">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class=" heart"> 
+                             <i class="fa-regular fa-heart"></i> 
+                        </div>
+                             </div>
+                        <div class="cart-btn">
+                            <button class="btn text-white fw-bold text-uppercase">add to cart</button>
+                        </div>
+                    </div>
+                   </div>
+               <div class="text">
+                <p class="product-category">E-Bike / Scooter</p>
+                <p class="product-title">En rubber tyres</p>
+                <div class="product-price">
+                    <span class="span1">$49.00</span>  ~<span class="span2">$54.00</span>
+                    <span class="discount-badge">8%</span>
+                </div>
+               </div>
+            </div>
+            <div class="product-card">
+                <img src="images/ev-bike-pro-07.jpg" alt="Digital front display">
+                <div class="toggle">
+                    <div class="buttons d-flex flex-column gap-3 align-items-center" >
+                        <div class="eye-heart d-flex justify-content-center">
+                                
+                        <div class="eye ">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class=" heart"> 
+                             <i class="fa-regular fa-heart"></i> 
+                        </div>
+                             </div>
+                        <div class="cart-btn">
+                            <button class="btn text-white fw-bold text-uppercase">add to cart</button>
+                        </div>
+                    </div>
+                   </div>
+                <div class="text">
+                    <p class="product-category">E-Bike / Scooter</p>
+                <p class="product-title">Digital front display</p>
+                <div class="product-price">
+                    <span class="span1">$49.00</span>  ~<span class="span2">$54.00</span>
+                    <span class="discount-badge">5%</span>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/ev-bike-pro-08.jpg" alt="Seat storage battery">
+                <div class="toggle">
+                    <div class="buttons d-flex flex-column gap-3 align-items-center" >
+                        <div class="eye-heart d-flex justify-content-center">
+                                
+                        <div class="eye ">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class=" heart"> 
+                             <i class="fa-regular fa-heart"></i> 
+                        </div>
+                             </div>
+                        <div class="cart-btn">
+                            <button class="btn text-white fw-bold text-uppercase">add to cart</button>
+                        </div>
+                    </div>
+                   </div>
+                <div class="text">
+                    <p class="product-category">E-Bike / Scooter</p>
+                <p class="product-title">Seat storage battery</p>
+                <div class="product-price">
+                    <span class="span1">$49.00</span>  ~<span class="span2">$54.00</span>
+                    <span class="discount-badge">10%</span>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/ev-bike-pro-09.jpg" alt="Glass mirror RV">
+                <div class="toggle">
+                    <div class="buttons d-flex flex-column gap-3 align-items-center" >
+                        <div class="eye-heart d-flex justify-content-center">
+                                
+                        <div class="eye ">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class=" heart"> 
+                             <i class="fa-regular fa-heart"></i> 
+                        </div>
+                             </div>
+                        <div class="cart-btn">
+                            <button class="btn text-white fw-bold text-uppercase">add to cart</button>
+                        </div>
+                    </div>
+                   </div>
+                <div class="text">
+                    <p class="product-category">E-Bike / Scooter</p>
+                <p class="product-title">Glass mirror RV</p>
+                <div class="product-price">
+                    <span class="span1">$49.00</span>  ~<span class="span2">$54.00</span>
+                    <span class="discount-badge">5%</span>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+        <button class="load-more-btn">view more</button>
+        
+
+
+    </section>
+
+
+
+
+
+
+
+    <div style="margin-top: 200px;">
+
+    </div>
+
+    <!-- dark mode and add to cart section   -->
+
+
+        <section class="mode-cart container    ">
+            <div class="row ">
+                <div class="mode-image col-xl-6 col-lg-6 col-md-12 col-sm-12 ">
+                    <img src="images/ev-bike-advance-features-img.webp" width="500px" height="600px" alt="">
+                    
+                    
+                </div>
+                <div class="cart col-xl-6 col-lg-6 col-md-12 col-sm-12 ">
+                    <div class="card border-success mb-3" >
+                        <div class="card-header bg-transparent" style="border-bottom: 1px solid rgba(128, 128, 128, 0.1);">
+                            <h2>VR1 Ev bike</h2>
+                            <span>Straring price :
+                                $21.00 ~
+                                $25.00</span>
+                        </div>
+                        <div class="card-body text-success">
+                            <img src="images/ev-bike-pro-13.jpg" id="bikeImage" class="card-img-top" alt="...">
+                            <div class="circle-container">
+                                <div class="circle-icon green-check" id="greenBubble" >
+                                    <div class="speech-bubble  position-absolute top-30 start-10 ">
+                                        GREEN
+                                    </div>
+                                    <i class="fa-solid fa-check  d-block" ></i>
+                                </div>
+                                <div class="circle-icon purple-circle" id="purpleBubble" >
+                                    <div class="speech-bubble position-absolute top-30 start-10"  >
+                                        PURPLE
+                                    </div>
+                                    <i class="fa-solid fa-check" ></i>
+                                </div>
+                                <div class="circle-icon blue-circle" id="blueBubble" >
+                                    <div class="speech-bubble position-absolute top-30 start-10" >
+                                        BLUE
+                                    </div>
+                                    <i class="fa-solid fa-check" ></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid rgba(128, 128, 128, 0.1);" class="card-footer bg-transparent  d-flex justify-content-around align-items-center">
+                            <div class="heart" >
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+
+                            <div class="add-to-cart d-none d-xl-block d-lg-block">
+                                <button class="btn  fw-bold text-uppercase">add to cart</button>
+                            
+                            </div>
+                            <div class="add-to-cart-small d-block d-xl-none d-lg-none">
+                                <i class="fa-solid fa-bag-shopping"></i> 
+                            
+                            </div>
+
+                            <div class="view">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+        
+        </section>
+    <!-- Subscribe newsletter -->
+    <section class="subscribe-newsletter mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center newsletter-title">
+                    <h2>Subscribe Newsletter</h2>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <form class="newsletter-form m-5 d-flex ">
+                        <div class="mb-3 newsletter-input">
+                            <input type="email" class="form-control" placeholder="Enter your email..." required>
+                        </div>
+                        <div class="subscribe-btn">
+                            <button type="submit" class="btn ">Subscribe Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Happy client love -->
+     <section class="happy-client-love container-fluid  mt-5 mb-5">
+      <div class=" row title pt-5 ">
+        <h2 class="col-12 text-center mt-5 text-uppercase fw-bold">Happy client love</h2>
+      </div>
+      <div class="container mb 
+      mySwiper-client">
+        <div class="swiper-wrapper">
+            <!-- <div class="comma-container"> -->
+                
+                <div class="comma-container swiper-slide p-4    ">
+                    <div class="comma">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div class="desc  ">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                            looking at its layout.</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="testimonial-author d-flex justify-content-start align-items-center ">
+                            <!-- <div class="author-image "> -->
+                                <img class="author-image" src="images/ev-bike-testi-01.jpg" alt="">
+                            <!-- </div> -->
+                            <div class="author-bio p-3">
+                                <h4>Maurn biologist</h4>
+                                <span>store customer</span>
+                            </div>
+            
+                            
+                        </div>
+                        <div class="author-comment pt-4">
+                            <span class="comment-icon">
+                                <i class="fa-regular fa-comment"></i>
+                            </span>
+                            <span class="fw-bold text-black">03</span>
+                        </div>
+                    </div>    
+                </div>
+                <div class="comma-container swiper-slide p-4    ">
+                    <div class="comma">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div class="desc  ">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                            looking at its layout.</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="testimonial-author d-flex justify-content-start align-items-center ">
+                            <!-- <div class="author-image "> -->
+                                <img class="author-image" src="images/ev-bike-testi-02.jpg" alt="">
+                            <!-- </div> -->
+                            <div class="author-bio p-3">
+                                <h4>Maurn biologist</h4>
+                                <span>store customer</span>
+                            </div>
+            
+                            
+                        </div>
+                        <div class="author-comment pt-4">
+                            <span class="comment-icon">
+                                <i class="fa-regular fa-comment"></i>
+                            </span>
+                            <span class="fw-bold text-black">03</span>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+                <div class="comma-container swiper-slide p-4    ">
+                    <div class="comma">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div class="desc  ">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                            looking at its layout.</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="testimonial-author d-flex justify-content-start align-items-center ">
+                            <!-- <div class="author-image "> -->
+                                <img class="author-image" src="images/ev-bike-testi-03.jpg" alt="">
+                            <!-- </div> -->
+                            <div class="author-bio p-3">
+                                <h4>Maurn biologist</h4>
+                                <span>store customer</span>
+                            </div>
+            
+                            
+                        </div>
+                        <div class="author-comment pt-4">
+                            <span class="comment-icon">
+                                <i class="fa-regular fa-comment"></i>
+                            </span>
+                            <span class="fw-bold text-black">03</span>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+                <div class="comma-container swiper-slide p-4    ">
+                    <div class="comma">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div class="desc  ">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                            looking at its layout.</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="testimonial-author d-flex justify-content-start align-items-center ">
+                            <!-- <div class="author-image "> -->
+                                <img class="author-image" src="images/ev-bike-testi-04.jpg" alt="">
+                            <!-- </div> -->
+                            <div class="author-bio p-3">
+                                <h4>Maurn biologist</h4>
+                                <span>store customer</span>
+                            </div>
+            
+                            
+                        </div>
+                        <div class="author-comment pt-4">
+                            <span class="comment-icon">
+                                <i class="fa-regular fa-comment"></i>
+                            </span>
+                            <span class="fw-bold text-black">03</span>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+                <div class="comma-container swiper-slide p-4    ">
+                    <div class="comma">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div class="desc  ">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                            looking at its layout.</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="testimonial-author d-flex justify-content-start align-items-center ">
+                            <!-- <div class="author-image "> -->
+                                <img class="author-image" src="images/ev-bike-testi-05.jpg" alt="">
+                            <!-- </div> -->
+                            <div class="author-bio p-3">
+                                <h4>Maurn biologist</h4>
+                                <span>store customer</span>
+                            </div>
+            
+                            
+                        </div>
+                        <div class="author-comment pt-4">
+                            <span class="comment-icon">
+                                <i class="fa-regular fa-comment"></i>
+                            </span>
+                            <span class="fw-bold text-black">03</span>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+
+              
+              
+
+            <!-- </div> -->
+           
+       
+        
+        
+        </div>
+        
+      </div>
+
+      <div class="mt-5 mb-5" style="border: .2px solid rgba(128, 128, 128, 0.1);">
+
+      </div>
+
+      <div class="container py-5">
+        
+        <div class="row">
+            <!-- Feature 1 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="feature-box">
+                    <i class="feature-icon fa-solid fa-square-xmark"></i>
+                    <div class="feature-title">Zero down payment</div>
+                    <p class="feature-desc">It has survived not only five.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="feature-box">
+                    <i class=" feature-icon fa-solid fa-percent"></i>
+                    <div class="feature-title">Interest rate 5.99%</div>
+                    <p class="feature-desc">It has survived not only five.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="feature-box">
+                    <i class="feature-icon fa-solid fa-square-check"></i>
+                    <div class="feature-title">Instant loan approval</div>
+                    <p class="feature-desc">It has survived not only five.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="feature-box">
+                    <i class="feature-icon fa-solid fa-circle-nodes"></i>
+                    <div class="feature-title">Best service 3 years</div>
+                    <p class="feature-desc">It has survived not only five.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+  
+     </section>
+
+    <!-- Our recently blog -->
+
+    <section class="container our-recently-blog mt-5 mb-5">
+              <h2 class="text-center mb-5 fw-bold text-black text-uppercase ">Our recently blog</h2>
+
+              <div class="container-fluid mySwiper-blog">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    
+                        <img src="images/ev-bike-blog-01.webp" alt="">
+                    
+                    <div class="blog-content mt-4">
+                        <h6 class="title">Where does it come from?</h6>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</p>
+                        <span class="author">By Mohammad Yusuf</span>
+    
+                    </div>
+                     <div class="sep">
+                        <span class="num  ">08<span>
+                            
+                        <span class="txt  text-uppercase">sep</span>
+
+                     </div>
+
+                     
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/ev-bike-blog-02.webp" alt="">
+                    <div class="blog-content mt-4">
+                        <h6 class="title">Where does it come from?</h6>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</p>
+                        <span class="author">By Mohammad Yusuf</span>
+    
+                    </div>
+                    <div class="sep">
+                        <span class="num  ">08<span>
+                            
+                        <span class="txt  text-uppercase">sep</span>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/ev-bike-blog-03.webp" alt="">
+                    <div class="blog-content mt-4">
+                        <h6 class="title">Where does it come from?</h6>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</p>
+                        <span class="author">By Mohammad Yusuf</span>
+    
+                    </div>
+                    <div class="sep">
+                        <span class="num  ">08<span>
+                            
+                        <span class="txt  text-uppercase">sep</span>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/ev-bike-blog-04.webp" alt="">
+                    <div class="blog-content mt-4">
+                        <h6 class="title">Where does it come from?</h6>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</p>
+                        <span class="author">By Mohammad Yusuf</span>
+    
+                    </div>
+                    <div class="sep">
+                        <span class="num  ">08<span>
+                            
+                        <span class="txt  text-uppercase">sep</span>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/ev-bike-blog-05.webp" alt="">
+                    <div class="blog-content mt-4">
+                        <h6 class="title">Where does it come from?</h6>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</p>
+                        <span class="author">By Mohammad Yusuf</span>
+    
+                    </div>
+                    <div class="sep">
+                        <span class="num  ">08<span>
+                            
+                        <span class="txt  text-uppercase">sep</span>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/ev-bike-blog-07.jpg" alt="">
+                    <div class="blog-content mt-4">
+                        <h6 class="title">Where does it come from?</h6>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</p>
+                        <span class="author">By Mohammad Yusuf</span>
+    
+                    </div>
+                    <div class="sep">
+                        <span class="num  ">08<span>
+                            
+                        <span class="txt  text-uppercase">sep</span>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/ev-bike-blog-06.webp" alt="">
+                    <div class="blog-content mt-4">
+                        <h6 class="title">Where does it come from?</h6>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</p>
+                        <span class="author">By Mohammad Yusuf</span>
+    
+                    </div>
+                    <div class="sep">
+                        <span class="num  ">08<span>
+                            
+                        <span class="txt  text-uppercase">sep</span>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/ev-bike-blog-07.jpg" alt="">
+                    <div class="blog-content mt-4">
+                        <h6 class="title">Where does it come from?</h6>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</p>
+                        <span class="author">By Mohammad Yusuf</span>
+    
+                    </div>
+                    <div class="sep">
+                        <span class="num  ">08<span>
+                            
+                        <span class="txt  text-uppercase">sep</span>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/ev-bike-blog-08.jpg" alt="">
+                    <div class="blog-content mt-4">
+                        <h6 class="title">Where does it come from?</h6>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</p>
+                        <span class="author">By Mohammad Yusuf</span>
+    
+                    </div>
+                    <div class="sep">
+                        <span class="num  ">08<span>
+                            
+                        <span class="txt  text-uppercase">sep</span>
+                     </div>
+                  </div>
+                  
+                  
+                </div>
+                
+
+                <div class="blog-view-btn">
+                  
+                  <button class="btn text-white fw-bold">VIEW MORE</button>
+                </div>
+              </div>
+              
+
+    </section>
+
+    <!-- youtube video -->
+
+    
+    <section class=" container youtube-video ">
+      
+         <div class="row">
+            <div class="pulse-shadow col-xl-4 col-lg-4 col-md-4 col-sm-4 video-icon">
+                <i class="fa-solid fa-caret-right"></i>
+            </div>
+     
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 video-title ">
+             <h2>
+                <span class="text-nowrap">It still cheaper than <br></span>
+                <span class="text-nowrap">a petrol ev scooter.</span>
+             </h2>
+            </div>
+     
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 video-button ">
+               <a href="" >Calculate savings</a>
+            </div>
+         </div>
+
+    </section>    
+
+
+    <!-- footer -->
+    
+    <footer >
+        
+        <div class="container mt-5">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h5>INFORMATION</h5>
+                    <ul>
+                        <li><a href="#">About history</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Terms & conditions</a></li>
+                        <li><a href="#">Return policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>SUPPORT</h5>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Help & support</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>CATEGORY</h5>
+                    <ul>
+                        <li><a href="#">Ather 450X</a></li>
+                        <li><a href="#">Charging</a></li>
+                        <li><a href="#">Battery health</a></li>
+                        <li><a href="#">Ev bike tyres</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>MY ACCOUNT</h5>
+                    <ul>
+                        <li><a href="#">Order & returns</a></li>
+                        <li><a href="#">Manage account</a></li>
+                        <li><a href="#">Saved items</a></li>
+                        <li><a href="#">Our story</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>FOLLOWED BY</h5>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Dribbble</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>CUSTOMER</h5>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">My wishlist</a></li>
+                        <li><a href="#">Page 404</a></li>
+                        <li><a href="#">Return policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="d-flex align-items-center gap-5">
+                    <img src="images/logo-black.avif" alt="EVOBN Logo">
+                    <p>© 2023, Ecommerce by qodexTM</p>
+                </div>
+                <div class="mx-5">
+                    <a href="#">Credit usage policy</a>
+                    <a href="#">Warranty</a>
+                    <a href="#">Subscription</a>
+                    <a href="#">Trademarks</a>
+                    <a href="#">Corporate</a>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <div class="phone">
+                    <div>
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="d-block">
+                        <span class="now">ORDER NOW :</span>
+                        <br>
+                        <span class="info">(+260) 150 105 018</span>
+                    </div>
+                </div>
+                <div class="email">
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="d-block">
+                        <span class="now">EMAIL NOW :</span>
+                        <br>
+                        <span class="info">demo@demo.com</span>
+                    </div>
+
+                </div>
+
+
+                <div class="address">
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="d-block">
+                        <span class="now">ADDRESS NOW :</span>
+                        <br>
+                        <span class="info">Akshya nagar 1st block 1st cross</span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <button class="scroll-to-top" id="scrollToTopBtn">
+                <i class="fa-solid fa-arrow-up "></i>
+            </button>
+
+        </div>
+    </footer>
+
+    
+
+
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   
+        
+      
+
+    <!-- Initialize Swiper -->
+    <script>
+
+        // header slider
+        var swiper = new Swiper(".mySwiper-header", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+               
+                
+            },
+        
+        });
+
+
+// category slider
+
+// category slider
+var swiper = new Swiper(".mySwiper-cat", {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false,
+            // },
+            breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+        },
+        });
+// brand slider
+        var swiperBrand = new Swiper('.swiper-container-brand', {
+            slidesPerView: 5,
+            direction: getDirection(),
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                resize: function () {
+                    swiper.changeDirection(getDirection());
+                },
+            },
+        });
+
+        function getDirection() {
+            var windowWidth = window.innerWidth;
+            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+            return direction;
+        }
+
+
+        // Our recently blog slider
+        var swiper = new Swiper(".mySwiper-blog", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        
+      });
+
+    //   happy-client-love slider
+    var swiper = new Swiper(".mySwiper-client", {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        slidesPerGroup: 2,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        
+      });
+    </script>
+</body>
+
+</html>
