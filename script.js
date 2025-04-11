@@ -117,17 +117,17 @@ const collectionDropdown = document.getElementById('collectionDropdown');
 
 // shop category
 const swiperSlides= document.querySelectorAll('.swiper-slide');
-// const arrowDiv=document.querySelector('.arrow-div');
+
 
 swiperSlides.forEach(slide => {
     slide.addEventListener('mouseover', () => {
         slide.querySelector('.arrow-div').style.display = 'block';
-        // slide.style.opacity = '.5';
+        
        
     });
     slide.addEventListener('mouseout', () => {
         slide.querySelector('.arrow-div').style.display = 'none';
-        // slide.style.opacity = '1';
+        
     });
 
 });
@@ -136,11 +136,9 @@ swiperSlides.forEach(slide => {
 // add to cart
 // Get all circle icons
 const circles = document.querySelectorAll('.circle-icon');
-// const bikeImage=document.getElementById('bikeImage');
-// const purpleBubble=document.getElementById('purpleBubbles');
 
 circles.forEach(circle => {
-    const checkIcon = circle.querySelector('i');
+   const checkIcon = circle.querySelector('i');
     const bubble =circle.querySelector('.speech-bubble');
     
     // Show check on hover
@@ -173,7 +171,7 @@ card.addEventListener('mouseout', () => {
 });
 
 
-// change image on click
+// change image color  on click
 
 document.addEventListener('DOMContentLoaded', function() {
     const bikeImage = document.getElementById('bikeImage');
@@ -221,4 +219,32 @@ scrollToTopBtn.onclick = function() {
     top: 0,
     behavior: 'smooth'
    });
+
+
 }
+
+// 
+
+const slid1=document.getElementById('slid1');
+const slid2=document.getElementById('slid2');
+const slid3=document.getElementById('slid3');
+slid2.addEventListener('click',function(){
+    slid2.classList.add('active');
+    slid1.classList.remove('active');
+    slid3.classList.remove('active');
+});
+slid1.addEventListener('click',function(){
+    slid1.classList.add('active');
+    slid2.classList.remove('active');
+    slid3.classList.remove('active');
+});
+slid3.addEventListener('click',function(){
+    slid3.classList.add('active');
+    slid1.classList.remove('active');
+    slid2.classList.remove('active');
+});
+
+
+
+
+    

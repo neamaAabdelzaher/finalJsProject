@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Dropdown Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .nested-dropdown {
+            position: relative;
+        }
+        .nested-dropdown-menu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            margin-top: -8px;
+            margin-left: 0.125rem;
+        }
+        @media (max-width: 991.98px) {
+            .nested-dropdown-menu {
+                position: static;
+                margin-left: 0;
+            }
+        }
+        .dropdown-item {
+            cursor: pointer;
+        }
+        .rotate-icon {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+        }
+        .reset-icon {
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="dropdown">
+            <button class="bg-transparent border-0 "  type="button" id="collectionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                COLLECTION
+                <span class="ms-2 reset-icon" id="collectionIcon">▼</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="collectionDropdown">
+                <li class="nested-dropdown">
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" id="featureProduct">
+                        Feature product
+                        <span class="reset-icon" id="featureIcon">▼</span>
+                    </a>
+                    <ul class="dropdown-menu nested-dropdown-menu" id="featureMenu">
+                        <li><a class="dropdown-item" href="#">Chickpea 150g</a></li>
+                        <li><a class="dropdown-item" href="#">Fresh almonds</a></li>
+                        <li><a class="dropdown-item" href="#">Healthy walnut</a></li>
+                        <li><a class="dropdown-item" href="#">Juglans walnuts</a></li>
+                        <li><a class="dropdown-item" href="#">Pure mug dal</a></li>
+                        <li><a class="dropdown-item" href="#">Saffron spice still</a></li>
+                    </ul>
+                </li>
+                <li class="nested-dropdown">
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" id="trendingProduct">
+                        Trending product
+                        <span class="reset-icon" id="trendingIcon">▼</span>
+                    </a>
+                    <ul class="dropdown-menu nested-dropdown-menu" id="trendingMenu">
+                        <li><a class="dropdown-item" href="#">Stack of cinnamon</a></li>
+                        <li><a class="dropdown-item" href="#">Red chili pepper</a></li>
+                        <li><a class="dropdown-item" href="#">Fresh almonds</a></li>
+                        <li><a class="dropdown-item" href="#">Healthy walnut</a></li>
+                        <li><a class="dropdown-item" href="#">Natural coriander</a></li>
+                        <li><a class="dropdown-item" href="#">Green moong dal</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const collectionDropdown = document.getElementById('collectionDropdown');
+            const collectionIcon = document.getElementById('collectionIcon');
+            const featureProduct = document.getElementById('featureProduct');
+            const featureMenu = document.getElementById('featureMenu');
+            const featureIcon = document.getElementById('featureIcon');
+            const trendingProduct = document.getElementById('trendingProduct');
+            const trendingMenu = document.getElementById('trendingMenu');
+            const trendingIcon = document.getElementById('trendingIcon');
+            
+            // Toggle collection dropdown and reset nested menus when clicked
+            collectionDropdown.addEventListener('click', function() {
+                // Close all nested menus when collection is clicked
+                featureMenu.classList.remove('show');
+                trendingMenu.classList.remove('show');
+                featureIcon.classList.remove('rotate-icon');
+                featureIcon.classList.add('reset-icon');
+                trendingIcon.classList.remove('rotate-icon');
+                trendingIcon.classList.add('reset-icon');
+                
+                // Toggle collection icon
+                if (collectionIcon.classList.contains('rotate-icon')) {
+                    collectionIcon.classList.remove('rotate-icon');
+                    collectionIcon.classList.add('reset-icon');
+                } else {
+                    collectionIcon.classList.remove('reset-icon');
+                    collectionIcon.classList.add('rotate-icon');
+                }
+            });
+            
+            // Toggle feature product menu
+            featureProduct.addEventListener('click', function(e) {
+                e.stopPropagation();
+                featureMenu.classList.toggle('show');
+                
+                // Toggle icon
+                if (featureIcon.classList.contains('rotate-icon')) {
+                    featureIcon.classList.remove('rotate-icon');
+                    featureIcon.classList.add('reset-icon');
+                } else {
+                    featureIcon.classList.remove('reset-icon');
+                    featureIcon.classList.add('rotate-icon');
+                }
+                
+                // Close trending menu if open
+                trendingMenu.classList.remove('show');
+                trendingIcon.classList.remove('rotate-icon');
+                trendingIcon.classList.add('reset-icon');
+            });
+            
+            // Toggle trending product menu
+            trendingProduct.addEventListener('click', function(e) {
+                e.stopPropagation();
+                trendingMenu.classList.toggle('show');
+                
+                // Toggle icon
+                if (trendingIcon.classList.contains('rotate-icon')) {
+                    trendingIcon.classList.remove('rotate-icon');
+                    trendingIcon.classList.add('reset-icon');
+                } else {
+                    trendingIcon.classList.remove('reset-icon');
+                    trendingIcon.classList.add('rotate-icon');
+                }
+                
+                // Close feature menu if open
+                featureMenu.classList.remove('show');
+                featureIcon.classList.remove('rotate-icon');
+                featureIcon.classList.add('reset-icon');
+            });
+            
+            // Close all menus when clicking outside
+            document.addEventListener('click', function() {
+                featureMenu.classList.remove('show');
+                trendingMenu.classList.remove('show');
+                featureIcon.classList.remove('rotate-icon');
+                featureIcon.classList.add('reset-icon');
+                trendingIcon.classList.remove('rotate-icon');
+                trendingIcon.classList.add('reset-icon');
+                collectionIcon.classList.remove('rotate-icon');
+                collectionIcon.classList.add('reset-icon');
+            });
+        });
+    </script>
+</body>
+</html>
